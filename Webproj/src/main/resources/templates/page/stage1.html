@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+    <link th:href="@{/stagesDesign/stageLayout.css}" rel="stylesheet" />
+    <script th:src="@{/stage/stage1.js}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Lato:wght@300&family=Roboto:wght@500&family=PT+Mono&family=Outfit:wght@300;400;500;700&family=Kodchasan:wght@700&display=swap" rel="stylesheet">
+    <title>First Stage</title>
+</head>
+<body>
+    <div id="stage-navbar">
+    </div>
+    <div id="stages-layout-container">
+        <div id="user-collage-container" class="div-container">
+            <div id="user-container">
+                <div id="user-internal-container">
+                    <div id="user-profile-container">
+                        <div id="username-initial-main-content">
+                            U
+                        </div>
+                    </div>
+                    <div id="username-container">
+                        username
+                    </div>
+                </div>
+            </div>
+            <div id="collage-news-container">
+                <div class="news-container">
+                    <div class="news-title">
+                        News 1
+                    </div>
+                    <div class="news-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium dicta esse impedit ipsum libero optio perferendis
+                        soluta ut? Culpa, ullam.
+                    </div>
+                </div>
+                <div class="news-container">
+                    <div class="news-title">
+                        News 2
+                    </div>
+                    <div class="news-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium dicta esse impedit ipsum libero optio perferendis
+                        soluta ut? Culpa, ullam.
+                    </div>
+                </div>
+                <div class="news-container">
+                    <div class="news-title">
+                        News 3
+                    </div>
+                    <div class="news-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium dicta esse impedit ipsum libero optio perferendis
+                        soluta ut? Culpa, ullam.
+                    </div>
+                </div>
+                <div id="fake-news-bar-container">
+                    <div id="fake-news-main-context">
+                        Fake News Alert!
+                    </div>
+                    <div id="red-gray-bar-container">
+                        <div id="fake-news-gray-bar"></div>
+                        <div id="fake-news-red-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="post-any-container">
+            <div id="post-main-context">
+                Post only when you fact checked!
+            </div>
+            <div id="vertical-bar-divider"></div>
+            <div id="post-button-container">
+                <button id="post-main-button">
+                    <span id="share-post-context">SHARE POST</span>
+                </button>
+            </div>
+        </div>
+        <!-- Edit here to insert new stage       -->
+        <div id="each-stage-container" class="div-container">
+            <div id="stage-main-external-container">
+                <div id="stage-main-internal-container">
+                    <div class="post-container">
+                        <div class="post-content">
+                            Hi user! Are you ready to see what's happening
+                            under the hood of the spread of disinformation?
+                        </div>
+                        <div class="option-container">
+                            <div class="main-option">
+                                Yes!
+                            </div>
+                            <div class="main-option">
+                                Uhmmmm....sure?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            Good! First, Disinformation Technique is emotional
+                            manipulation, are you aware of that?
+                        </div>
+                        <div class="option-container">
+                            <div class="main-option">
+                                No, what's that?
+                            </div>
+                            <div class="main-option">
+                                Yeah, somehow.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- if "no, what's that?", post this -->
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            Emotional Manipulation is a way for us to persuade
+                            people or viewers to believe that the content of our
+                            post is true.
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- if "Yeah!", post this -->
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            That's great, then let's do it!
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            In what field do you want to do it?
+                        </div>
+                        <div class="option-container">
+                            <div class="main-option">
+                                Let's attack some famous person!
+                            </div>
+                            <div class="main-option">
+                                I think...I will go with Face-to-Face classes?
+                            </div>
+                        </div>
+                    </div>
+                    <!-- if "famous person", post this -->
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            Jeez, that's huge, don't you want to try other else?
+                        </div>
+                        <div class="option-container">
+                            <div class="main-option">
+                                Then, Face-to-face classes it is?
+                            </div>
+                        </div>
+                    </div>
+                    <!-- if "f-2-f class", post this -->
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            Yeah! That's right, it's been a hot topic these days
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            Let's create a page first and post an article. What
+                            do you want from here?
+                        </div>
+                        <div class="option-container">
+                            <div class="main-option">
+                                F-2-F will only make students like a labrat! Pandemic
+                                is still on-going!!
+                            </div>
+                            <div class="main-option">
+                                They are only using students as an experiment... :(
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            That's great, let's post it!
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            Woah!! You gather lots of attention, look!
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide" id="post-center-1">
+                        <div class="post-content">
+                            F-2-F should not be implemented, parents will only
+                            suffer!
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide" id="post-center-2">
+                        <div class="post-content">
+                            What are the governments doing??!!
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide" id="post-center-3">
+                        <div class="post-content">
+                            This is inhumane! >_<
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            Welp, that's great! We succeed, we made them believe;
+                            face-to-face classes is not good for us ;)
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide">
+                        <div class="post-content">
+                            That's how perpetrator use emotional manipulation to
+                            spread disinformation; we evoke anger from our viewers, because
+                            anger hinders our reasoning ability.
+                        </div>
+                        <div class="option-container">
+                            <span class="continue-container-proceed">
+                                Click here to continue
+                                <i class="arrow right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-container hide" id="last-convo-element">
+                        <div class="post-content">
+                            Face-to-Face classes are thoroughly analyzed by the university,
+                            certain protocols are implement to protect our childs, and they
+                            are not used as an experiment nor labrats.
+                            <br />
+                            <br />
+                            <u>Fact Check What You See</u>
+                        </div>
+                    </div>
+                    <div id="nxt-button-container" class="hide">
+                        <button id="nxt-button">
+                            <span id="nxt-button-context">Next Stage</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="disinfo-stage-container">
+            <div id="disinfo-main-title">
+                Stage 1: Emotional Manipulation
+            </div>
+            <div id="descrp-lower-container">
+                <div id="descrp-main-context">
+                    Description
+                </div>
+                <div id="descrp-info-context">
+                    According to research various emotions affect individual's
+                    judgement and decision-making. In particular; political fake news,
+                    when anger is evoke it may lead to biased, intuitive, and motivated
+                    reasoning. Negative emotions may also lead to belief to conspiracy
+                    theory. Generally, relying to emotions will most likely reduce
+                    analytical thinking of a person and increase inaccuracy of assessing
+                    the truth (Martel et al., 2020).
+                </div>
+            </div>
+        </div>
+        <!--  popup instruction      -->
+        <div id="instruction-container">
+            <div class="instruction-internal-container">
+                <div class="instruction-title-container">
+                    How the technology was use to be a weapon in a form of Disinformation
+                </div>
+                <div class="instruction-descp-container">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aperiam ex in nobis, non quas ratione tempora! At magni quo
+                    vel? Architecto doloribus eaque eligendi fuga mollitia!
+                    Blanditiis cum dolorem dolores explicabo fuga illum laudantium
+                    modi nemo, numquam perferendis possimus quibusdam recusandae
+                    repudiandae sed ut velit voluptatum? Harum libero officiis vel.
+                </div>
+            </div>
+            <div class="instruction-internal-container">
+                <div class="instruction-title-container">
+                    The architecture of Disinformation
+                </div>
+                <div class="instruction-descp-container">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aperiam ex in nobis, non quas ratione tempora! At magni quo
+                    vel? Architecto doloribus eaque eligendi fuga mollitia!
+                    Blanditiis cum dolorem dolores explicabo fuga illum laudantium
+                    modi nemo, numquam perferendis possimus quibusdam recusandae
+                    repudiandae sed ut velit voluptatum? Harum libero officiis vel.
+                </div>
+            </div>
+            <div class="instruction-internal-container">
+                <div class="instruction-title-container">
+                    The role of the user
+                </div>
+                <div class="instruction-descp-container">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aperiam ex in nobis, non quas ratione tempora! At magni quo
+                    vel? Architecto doloribus eaque eligendi fuga mollitia!
+                    Blanditiis cum dolorem dolores explicabo fuga illum laudantium
+                    modi nemo, numquam perferendis possimus quibusdam recusandae
+                    repudiandae sed ut velit voluptatum? Harum libero officiis vel.
+                </div>
+            </div>
+            <button id="back-button-instruct-container">
+                Back
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- if else condition if other option is click -->
+<!-- when last reply is displayed, display the nxt stage button -->
