@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const backInstructButton = document.querySelector("#back-button-instruct-container");
-    backInstructButton.addEventListener('click', function() {
-        const instructContainer = document.querySelector("#instruction-container");
-        instructContainer.style.display = "none";
+
+    // add event listener to close welcome stage container
+    const closeWelcomeStageButton = document.querySelector('#close-button-container');
+    closeWelcomeStageButton.addEventListener('click', function(e) {
+        const welcomeStageContainer = document.querySelector("#welcome-stage-container");
+        welcomeStageContainer.style.display = "none";
     });
 
     // add event listener to each options in the all post
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         continueContainer.addEventListener('click', function(e) {
             const nxtPost = continueContainer.parentNode.parentNode.nextElementSibling;
             nxtPost.className = 'post-container show';
-            nxtPost.scrollIntoView({ behavior: 'smooth', block: 'end'});
+            nxtPost.scrollIntoView({ behavior: 'smooth', block: 'center'});
 
             // if last convo container is display, show the nxt stage button
             showNxtButton();
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     nxtStageButton.addEventListener('click', function(e) {
         e.preventDefault();
         console.log("this is click");
-        window.location.replace(`/stage2`);
+        window.location.replace(`/stage3`);
     });
 });
 
@@ -64,18 +66,17 @@ function showNxtButton() {
     if(lastConvo.className === 'post-container show') {
         const nxtStageButton = document.querySelector('#nxt-button-container');
         nxtStageButton.className = 'show';
-        nxtStageButton.scrollIntoView({ behavior: 'smooth', block: 'center'});
     }
 }
 
 function checkUserOption(option, nxtPost) {
-    if(option.includes("Yeah, somehow.") || option.includes("Face-to-Face classes?")) {
+    if(option.includes("Maybe...") || option.includes("Due to the pandemic we recently experienced")) {
         const showTheOtherPost = nxtPost.nextElementSibling;
         nxtPost.remove();
         showTheOtherPost.className = 'post-container show';
-        showTheOtherPost.scrollIntoView({ behavior: 'smooth', block: 'end'});
+        showTheOtherPost.scrollIntoView({ behavior: 'smooth', block: 'center'});
     } else {
         nxtPost.className = 'post-container show';
-        nxtPost.scrollIntoView({ behavior: 'smooth', block: 'end'});
+        nxtPost.scrollIntoView({ behavior: 'smooth', block: 'center'});
     }
 }

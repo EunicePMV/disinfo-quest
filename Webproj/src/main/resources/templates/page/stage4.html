@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+  <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+  />
+  <link th:href="@{/stagesDesign/stageLayout.css}" rel="stylesheet" />
+  <script th:src="@{/stage/stage4.js}"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Lato:wght@300&family=Roboto:wght@500&family=PT+Mono&family=Outfit:wght@300;400;500;700&family=Kodchasan:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Fourth Stage</title>
+</head>
+<body>
+  <div id="stage-navbar">
+  </div>
+  <div id="stages-layout-container">
+    <div id="user-collage-container" class="div-container">
+      <div id="user-container">
+        <div id="user-internal-container">
+          <div id="user-profile-container">
+            <div id="username-initial-main-content" th:text="${session.userChar}">
+            </div>
+          </div>
+          <div id="username-container" th:text="${session.username}">
+          </div>
+        </div>
+      </div>
+      <div id="collage-news-container">
+        <div class="news-container">
+          <div class="news-title">
+            World’s eyes on PH as ‘ground zero’ for disinformation—Robredo
+          </div>
+          <div class="news-content">
+            Leni Robredo, a former vice president, urged civic society groups, international
+            foundations, and local governments on Tuesday, Nov. 29, to work together to combat
+            disinformation in the Philippines, which she described to as a "ground zero" for
+            disinformation and influence operations.
+          </div>
+        </div>
+        <div class="news-container">
+          <div class="news-title">
+            Senators alarmed over recent survey results on fake news
+          </div>
+          <div class="news-content">
+            MANILA - Senators Nancy Binay and Jinggoy Estrada emphasized the importance of
+            strengthening the fight against the spreading of false information on Wednesday.
+          </div>
+        </div>
+        <div class="news-container">
+          <div class="news-title">
+            Fighting disinformation requires individual and industry effort, DFNN says
+          </div>
+          <div class="news-content">
+            Technology has led to many advancements, but it has also created many traps,
+            such false information and disinformation. According to a recent survey, a
+            staggering 90% of the adult population of the nation has come into contact
+            with fake news in some way, whether it be via the internet, television, or even
+            their own friends and family.
+          </div>
+        </div>
+        <div id="fake-news-bar-container">
+          <div id="fake-news-main-context">
+            Fake News Alert!
+          </div>
+          <div id="red-gray-bar-container">
+            <div id="fake-news-gray-bar"></div>
+            <div id="fake-news-red-bar"></div>
+          </div>
+        </div>
+    </div>
+    <div id="post-any-container">
+      <div id="post-main-context">
+        Post only when you fact checked!
+      </div>
+      <div id="vertical-bar-divider"></div>
+      <div id="post-button-container">
+        <div id="post-main-button">
+          <span id="share-post-context">SHARE POST</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Edit here to insert new stage       -->
+    <div id="each-stage-container" class="div-container">
+      <div id="stage-main-external-container">
+        <div id="stage-main-internal-container">
+          <div class="post-container">
+            <div class="post-content">
+              Hi there, good to see you reach the final stage! Are you ready for another stage of creating disinformation?
+              Don't worry, it's perfectly safe. Nothing you do in this game affects the real world.
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                Yes, let's go!
+              </div>
+              <div class="main-option">
+                Sure, why not?
+              </div>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              Now that you're ready... Our next disinformation technique will be called Impersonation.
+              Do you know what it is?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                I have no idea, will you please explain?
+              </div>
+              <div class="main-option">
+                Yeah, I have enough knowledge about that.
+              </div>
+            </div>
+          </div>
+          <!-- if "no idea", post this -->
+          <div class="post-container hide">
+            <div class="post-content">
+              Impersonation is basically when someone pretends to be another person.
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <!-- if "Yeah, I have enough knowledge about that.", post this -->
+          <div class="post-container hide">
+            <div class="post-content">
+              Nice! then let's proceed.
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              We can start by borrowing someone else's credibility. What do you want to do?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                Post disinformation with a Political Personality name.
+              </div>
+              <div class="main-option">
+                Impersonate a News Site.
+              </div>
+            </div>
+          </div>
+          <!-- if "Political Personality name", post this -->
+          <div class="post-container hide">
+            <div class="post-content">
+              Only few people might be able to see your post, does impersonating a News TV site sounds better to you?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                You're right, we can gather more crowd with a "credible" news site.
+              </div>
+            </div>
+          </div>
+          <!-- if "Impersonate a News Site.", post this -->
+          <div class="post-container hide">
+            <div class="post-content">
+              What news do you want to post online?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                Anne Curtis already broke the silence. She's now confirming her annulment with her
+                husband Erwan Heussaff.
+              </div>
+              <div class="main-option">
+                Monkeypox can live on door handles and toilet seats for 120 years and can infect anyone from 5 miles away.
+              </div>
+            </div>
+          </div>
+          <!-- if "Anne Curtis", post this -->
+          <div class="post-container hide">
+            <div class="post-content">
+              Sheesh that news can probably get debunked too easily. You want to try something else? How about a news about monkeypox?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                Monkeypox is a variant of chickenpox
+              </div>
+            </div>
+          </div>
+          <!-- if "Monkeypox", post this -->
+          <div class="post-container hide">
+            <div class="post-content">
+              Alright now, what credible news site do you want to impersonate?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                AGM News (GMA News)
+              </div>
+              <div class="main-option">
+                ASB-CNB News (ABS-CBN News)
+              </div>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              Are you now ready to publish it on social media?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                Sure!
+              </div>
+              <div class="main-option">
+                Hmmm I guess.
+              </div>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              Hey! Did you notice the slight difference on the news site's name?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                Really? I don't notice it at all.
+              </div>
+              <div class="main-option">
+                Yes but it's quite unnoticeable actually.
+              </div>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              Looks like you've fooled some social media users! Let's see their reactions.
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide" id="post-center-1">
+            <div class="post-content">
+              Oh God! what are we gonna do?
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide" id="post-center-2">
+            <div class="post-content">
+              OMG! Is this another pandemic?
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide" id="post-center-3">
+            <div class="post-content">
+              I can't handle the news anymooore!
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              Good! We made them believe that the news headline about monkeypox is true.
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              That's how easy to impersonate someone on social media. Impersonators often use
+              the same photos, names, descriptions, posts, hashtags, and others as the official accounts.
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              In this case, the impersonator created a social media account with a name closely
+              related to a credible news source and posted a headline that will make people believe
+              that it's true.
+            </div>
+            <div class="option-container">
+                <span class="continue-container-proceed">
+                    Click here to continue
+                    <i class="arrow right"></i>
+                </span>
+            </div>
+          </div>
+          <div class="post-container hide">
+            <div class="post-content">
+              Easy peazy, right?
+            </div>
+            <div class="option-container">
+              <div class="main-option">
+                Yeah!
+              </div>
+            </div>
+          </div>
+          <div class="post-container hide" id="last-convo-element">
+            <div class="post-content">
+              The news that we have created is false. No such headline was published. It was just a
+              post made to appear that it was created by a credible news source and that it contained
+              a credible information. So, think before you click and be careful about the impersonators
+              on social media.
+              <br />
+              <br />
+              <u>Fact Check What You See</u>
+            </div>
+          </div>
+          <div id="nxt-button-container" class="hide">
+            <button id="nxt-button">
+              <span id="nxt-button-context">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="disinfo-stage-container">
+      <div id="disinfo-main-title">
+        Stage 4: Impersonation
+      </div>
+      <div id="descrp-lower-container">
+        <div id="descrp-main-context">
+          Description
+        </div>
+        <div id="descrp-info-context">
+          Cyber-criminals create a profile on a social platform using an individual’s personal
+          information to trick others into thinking the fake profile belongs to a real person who
+          they can trust. The end goal is to exploit those who interact with the fake account.
+          Scammers impersonate both individuals and companies (Rooyen, 2022).
+        </div>
+      </div>
+    </div>
+    <!--  popup welcome window  -->
+    <div id="welcome-stage-container" class="sliding-effect">
+      <div id="stage-title">
+        Welcome to Stage 4
+      </div>
+      <div id="welcome-stage-main-context">
+        At last! You're in the final stage! I hope you enjoy learning the common disinformation technique!
+      </div>
+      <div id="close-button-welcome-container">
+        <button id="close-button-container">
+          Close
+        </button>
+      </div>
+    </div>
+    <!--  popup final message window  -->
+    <div id="final-msg-container" class="sliding-effect">
+      <div id="final-msg-main-context">
+        You reach the end of the game! I hope you learn a lot in your journey with me; there are a lot of
+        disinformation techniques out there. So,  you have to be wise and don't play right on their trap; you
+        are equip with the knowledge of the common disinformation techniques, may this guide you and inspire
+        you to battle fake news in our digital era. Fact Check and play Disinfo Quest.
+        <br />
+        <br />
+        See you next time!
+      </div>
+      <div id="close-button-final-msg-container">
+        <button id="close-button-main-final-msg-container">
+          Back to Main Menu
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

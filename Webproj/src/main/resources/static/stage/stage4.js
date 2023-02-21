@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const backInstructButton = document.querySelector("#back-button-instruct-container");
-    backInstructButton.addEventListener('click', function() {
-        const instructContainer = document.querySelector("#instruction-container");
-        instructContainer.style.display = "none";
+
+    // add event listener to close welcome stage container
+    const closeWelcomeStageButton = document.querySelector('#close-button-container');
+    closeWelcomeStageButton.addEventListener('click', function(e) {
+        const welcomeStageContainer = document.querySelector("#welcome-stage-container");
+        welcomeStageContainer.style.display = "none";
     });
 
     // add event listener to each options in the all post
@@ -29,10 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // check if this option generate other convo
             checkUserOption(option.textContent, nxtPost);
 
-            // display the nxt convo
-            // nxtPost.className = 'post-container show';
-
-            // if last convo container is display, show the nxt stage button
+            // if last convo container is display, show the last message
             showNxtButton();
         });
     })
@@ -43,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
         continueContainer.addEventListener('click', function(e) {
             const nxtPost = continueContainer.parentNode.parentNode.nextElementSibling;
             nxtPost.className = 'post-container show';
-            nxtPost.scrollIntoView({ behavior: 'smooth', block: 'end'});
+            nxtPost.scrollIntoView({ behavior: 'smooth', block: 'center'});
 
-            // if last convo container is display, show the nxt stage button
+            // if last convo container is display, show the last message
             showNxtButton();
         });
     })
@@ -54,28 +53,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const nxtStageButton = document.querySelector('#nxt-button');
     nxtStageButton.addEventListener('click', function(e) {
         e.preventDefault();
-        console.log("this is click");
-        window.location.replace(`/stage2`);
+
+        // show the final message
+        showLastMsg();
     });
 });
+
+function showLastMsg() {
+    const lastConvo = document.querySelector('#last-convo-element');
+    if(lastConvo.className === 'post-container show') {
+        const finalMsg = document.querySelector('#final-msg-container');
+        finalMsg.style.display = 'block';
+
+        // if the back button is click, show the back to menu button
+        const backButton = document.querySelector('#close-button-main-final-msg-container');
+        backButton.addEventListener('click', function(e) {
+            window.location.replace(`/`);
+        });
+    }
+}
 
 function showNxtButton() {
     const lastConvo = document.querySelector('#last-convo-element');
     if(lastConvo.className === 'post-container show') {
         const nxtStageButton = document.querySelector('#nxt-button-container');
         nxtStageButton.className = 'show';
-        nxtStageButton.scrollIntoView({ behavior: 'smooth', block: 'center'});
     }
 }
 
 function checkUserOption(option, nxtPost) {
-    if(option.includes("Yeah, somehow.") || option.includes("Face-to-Face classes?")) {
+    if(option.includes("Yeah, I have enough knowledge about that.") || option.includes("Impersonate a News Site.") || option.includes("Monkeypox can live on door handles and toilet seats for 120 years")) {
         const showTheOtherPost = nxtPost.nextElementSibling;
         nxtPost.remove();
         showTheOtherPost.className = 'post-container show';
-        showTheOtherPost.scrollIntoView({ behavior: 'smooth', block: 'end'});
+        showTheOtherPost.scrollIntoView({ behavior: 'smooth', block: 'center'});
     } else {
         nxtPost.className = 'post-container show';
-        nxtPost.scrollIntoView({ behavior: 'smooth', block: 'end'});
+        nxtPost.scrollIntoView({ behavior: 'smooth', block: 'center'});
     }
 }

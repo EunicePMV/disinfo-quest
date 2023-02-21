@@ -13,6 +13,7 @@
     <script th:src="@{/index/indexFunc.js}"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Lato:wght@300&family=Roboto:wght@500&family=PT+Mono&family=Outfit:wght@300;400;500;700&family=Kodchasan:wght@700&display=swap" rel="stylesheet">
     <!-- pass in different title in each stage   -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Disinformation</title>
 </head>
 <body>
@@ -26,19 +27,19 @@
             </button>
         </div>
         <div id="lower-container">
-            <div class="hover-effect">
-                Creator
+            <div id="project-text" class="hover-effect">
+                Project
             </div>
-            <div class="hover-effect">
+            <div id="about-text" class="hover-effect">
                 About
             </div>
         </div>
     </div>
     <div id="username-container">
         <!-- popup form -->
-        <form id="form-container" method="post">
+        <form id="form-container" class="sliding-effect" th:method="post" th:action="register" th:object="${userForm}">
             <span id="username-label">Enter your nickname</span><br>
-            <input type="text" id="username-input" autofocus />
+            <input type="text" id="username-input" th:field="*{username}" autofocus />
             <div id="form-button-container">
                 <button class="form-button" id="form-back-button">
                     Back
@@ -48,6 +49,88 @@
                 </button>
             </div>
         </form>
+    </div>
+    <!--  About page  -->
+    <div id="about-page-container" class="other-context-container sliding-effect">
+        <div class="other-text-title">
+            About
+        </div>
+        <div class="other-text-main-context">
+            The game tackles about various disinformation techniques that can cause major problem in the
+            community. Disinformation, also known as "fake news," is a growing problem in today's society.
+            It refers to the deliberate spread of false or misleading information with the intention of
+            manipulating public opinion and causing confusion. The rise of the internet and social media
+            has made it easier than ever for disinformation to spread quickly and reach a large audience.
+            <br />
+            <br />
+            Disinformation can take many forms, from fabricated news stories and conspiracy theories to
+            manipulated images and videos. It can be spread through various mediums such as social media,
+            traditional news outlets, and even through word of mouth. The consequences of disinformation
+            can be severe, from undermining trust in democratic institutions to inciting violence and
+            spreading hate.
+            <br />
+            <br />
+            The spread of disinformation can have serious consequences, both in terms of short-term
+            confusion and long-term harm to society. For example, false information about COVID-19 can
+            lead to people not taking appropriate precautions or trusting in ineffective treatments.
+            Disinformation can also be used to interfere in elections, by spreading false or misleading
+            information about candidates or voting procedures. This can undermine the integrity of
+            democratic processes and erode public trust in government.
+            <br />
+            <br />
+            Combating disinformation requires a multifaceted approach. One important aspect is fact-checking,
+            which involves verifying information and identifying false or misleading content. Media literacy
+            education is also crucial, as it can help people develop the skills to critically evaluate the
+            information they encounter online. Another important aspect is regulation, which can involve
+            taking steps to hold social media platforms and other companies accountable for the spread of
+            disinformation on their platforms. Furthermore, international cooperation is vital as
+            disinformation does not respect borders and often originates from one country and spread
+            to another.
+            <br />
+            <br />
+            Disinformation is a serious problem that can have significant negative impacts
+            on society. It is important to be aware of its existence and to take steps to combat it
+            through fact-checking, media literacy education, and regulation.
+        </div>
+        <div class="back-index-button-container">
+            <button class="back-index-main-button">
+                Back
+            </button>
+        </div>
+    </div>
+    <!--  Project page  -->
+    <div id="project-page-container" class="other-context-container sliding-effect">
+        <div class="other-text-title">
+            Project
+        </div>
+        <div class="other-text-main-context">
+            The group has decided to develop a web-application game called "Disinfo Quest" to educate
+            and raise awareness about disinformation. The aim of the game is to educate players on how
+            to spot and combat disinformation through interactive gameplay and real-world scenarios.
+            Players will learn how to critically evaluate the information they come across and make
+            informed decisions in the future. By playing "Disinfo Quest," players will become more aware of
+            disinformation and better equipped to protect themselves and their communities from its
+            harmful effects.
+            <br />
+            <br />
+            A game-based learning was implemented as an emerging technology to the group's web application. It
+            was designed to help users develop digital literacy, critical thinking skills, and media
+            literacy. It does so by using gaming elements and mechanics to make learning more interactive
+            and engaging. The web application is for personalised-users, it means that the game does not
+            connect the user to another user and is solely a program or a game for only one person to play.
+            <br />
+            <br />
+            The group is excited to offer "Disinfo Quest" as a web-application game that can be accessed
+            from any device with an internet connection. It's designed to be easy to use and accessible
+            for players of all ages and backgrounds. Join the group in the fight against disinformation by visiting
+            the group's website and playing "Disinfo Quest" today. Learn how to spot and combat disinformation in
+            your daily life, and become a more informed and engaged citizen in the digital age.
+        </div>
+        <div class="back-index-button-container">
+            <button id="back-button-in-proj" class="back-index-main-button">
+                Back
+            </button>
+        </div>
     </div>
 </body>
 </html>

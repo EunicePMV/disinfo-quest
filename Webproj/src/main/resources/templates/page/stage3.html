@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+  <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+  />
+  <link th:href="@{/stagesDesign/stageLayout.css}" rel="stylesheet" />
+  <script th:src="@{/stage/stage3.js}"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Lato:wght@300&family=Roboto:wght@500&family=PT+Mono&family=Outfit:wght@300;400;500;700&family=Kodchasan:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Third Stage</title>
+</head>
+<body>
+<div id="stage-navbar">
+</div>
+<div id="stages-layout-container">
+  <div id="user-collage-container" class="div-container">
+    <div id="user-container">
+      <div id="user-internal-container">
+        <div id="user-profile-container">
+          <div id="username-initial-main-content" th:text="${session.userChar}">
+          </div>
+        </div>
+        <div id="username-container" th:text="${session.username}">
+        </div>
+      </div>
+    </div>
+    <div id="collage-news-container">
+      <div class="news-container">
+        <div class="news-title">
+          World’s eyes on PH as ‘ground zero’ for disinformation—Robredo
+        </div>
+        <div class="news-content">
+          Leni Robredo, a former vice president, urged civic society groups, international
+          foundations, and local governments on Tuesday, Nov. 29, to work together to combat
+          disinformation in the Philippines, which she described to as a "ground zero" for
+          disinformation and influence operations.
+        </div>
+      </div>
+      <div class="news-container">
+        <div class="news-title">
+          Senators alarmed over recent survey results on fake news
+        </div>
+        <div class="news-content">
+          MANILA - Senators Nancy Binay and Jinggoy Estrada emphasized the importance of
+          strengthening the fight against the spreading of false information on Wednesday.
+        </div>
+      </div>
+      <div class="news-container">
+        <div class="news-title">
+          Fighting disinformation requires individual and industry effort, DFNN says
+        </div>
+        <div class="news-content">
+          Technology has led to many advancements, but it has also created many traps,
+          such false information and disinformation. According to a recent survey, a
+          staggering 90% of the adult population of the nation has come into contact
+          with fake news in some way, whether it be via the internet, television, or even
+          their own friends and family.
+        </div>
+      </div>
+      <div id="fake-news-bar-container">
+        <div id="fake-news-main-context">
+          Fake News Alert!
+        </div>
+        <div id="red-gray-bar-container">
+          <div id="fake-news-gray-bar"></div>
+          <div id="fake-news-red-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="post-any-container">
+    <div id="post-main-context">
+      Post only when you fact checked!
+    </div>
+    <div id="vertical-bar-divider"></div>
+    <div id="post-button-container">
+      <div id="post-main-button">
+        <span id="share-post-context">SHARE POST</span>
+      </div>
+    </div>
+  </div>
+  <!-- Edit here to insert new stage       -->
+  <div id="each-stage-container" class="div-container">
+    <div id="stage-main-external-container">
+      <div id="stage-main-internal-container">
+        <div class="post-container">
+          <div class="post-content">
+            Oh! You're done with stage 2, do you still want to
+            know some more disinformation techniques?
+          </div>
+          <div class="option-container">
+            <div class="main-option">
+              Yes! It's interesting.
+            </div>
+            <div class="main-option">
+              For sure.
+            </div>
+          </div>
+        </div>
+        <div class="post-container hide">
+          <div class="post-content">
+            Okay good! The next technique is Fabrication disinformation, do you know anything about it?
+          </div>
+          <div class="option-container">
+            <div class="main-option">
+              Actually...no.
+            </div>
+            <div class="main-option">
+              Yes, I heard it somewhere.
+            </div>
+          </div>
+        </div>
+        <!-- if "Actually...no.", post this -->
+        <div class="post-container hide">
+          <div class="post-content">
+            Fabrication disinformation refers to the deliberate creation of false information,
+            with the intention of misleading people. Fabrication can take many forms, including
+            inventing events, quotes, statistics, or entire identities.
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <!-- if "Yes, I heard it somewhere.", post this -->
+        <div class="post-container hide">
+          <div class="post-content">
+            That's great! Then we're good to go
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide">
+          <div class="post-content">
+            Choose from the following fields
+          </div>
+          <div class="option-container">
+            <div class="main-option">
+              I wanna go big! Let's go with International Institution.
+            </div>
+            <div class="main-option">
+              I think...I will go with fashion brand like Jordan?
+            </div>
+          </div>
+        </div>
+        <!-- if "International Institution", post this -->
+        <div class="post-container hide">
+          <div class="post-content">
+            That will be best in the future test, but for now I have other suggestion, wanna try?
+          </div>
+          <div class="option-container">
+            <div class="main-option">
+              Let's attack fashion brand like Jordan
+            </div>
+          </div>
+        </div>
+        <!-- if "Jordan", post this -->
+        <div class="post-container hide">
+          <div class="post-content">
+            Yes! That's a good idea, This brand is currently in demand.
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide">
+          <div class="post-content">
+            Let's start posting now! What do you want to post here?
+          </div>
+          <div class="option-container">
+            <div class="main-option">
+              Jordan brand announced their mega sale, 23 Pesos for all Jordan items tomorrow.
+            </div>
+            <div class="main-option">
+              Tomorrow Jordan brand will have a clearance sale due to over supply, ITEMS ARE ALL FREE!
+            </div>
+          </div>
+        </div>
+        <div class="post-container hide">
+          <div class="post-content">
+            That's great, you shared an attractive post. Let's post it!
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide">
+          <div class="post-content">
+            Woah!! You gather lots of attention, look!
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide" id="post-center-1">
+          <div class="post-content">
+            OMG! I will go immediately to the nearest Jordan store!
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide" id="post-center-2">
+          <div class="post-content">
+            I can finally buy the shoes of my dreams =-=!!
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide" id="post-center-3">
+          <div class="post-content">
+            I will buy all the items I see tomorrow at the Jordan store! >_<
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide">
+          <div class="post-content">
+            Yey! You did it; you made them believe that there is a massive sale in Jordan ^_^
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide">
+          <div class="post-content">
+            That's how Fabrication disinformation happen, it leads to confusion, frustration, and waste
+            of resources for both the customers and the store. Fabricated disinformation can have real-
+            world consequences and negatively impact the lives of people. It is important to be vigilant and
+            critical of the information we come across, especially in the digital age where false information can
+            spread quickly and easily. Verifying the source and accuracy of information before acting on
+            it can help prevent the spread of disinformation.
+          </div>
+          <div class="option-container">
+              <span class="continue-container-proceed">
+                  Click here to continue
+                  <i class="arrow right"></i>
+              </span>
+          </div>
+        </div>
+        <div class="post-container hide" id="last-convo-element">
+          <div class="post-content">
+            To get legitimate information about a Jordan store sale event, you should visit the
+            official website of the Jordan brand or the website of the store where the sale is taking
+            place. You can also check the brand's social media accounts for updates and announcements.
+            <br />
+            <br />
+            It's important to be cautious of unofficial or third-party websites that may provide false
+            information about the sale event. You should also verify the information by checking multiple
+            sources and looking for information from credible news outlets.
+            <br />
+            <br />
+            <u>Fact Check What You See</u>
+          </div>
+        </div>
+        <div id="nxt-button-container" class="hide">
+          <button id="nxt-button">
+            <span id="nxt-button-context">Next Stage</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="disinfo-stage-container">
+    <div id="disinfo-main-title">
+      Stage 3: Fabrication Disinformation
+    </div>
+    <div id="descrp-lower-container">
+      <div id="descrp-main-context">
+        Description
+      </div>
+      <div id="descrp-info-context">
+        It refers to the deliberate creation of false information, with the
+        intention of misleading people. This technique is often used to spread
+        false stories or claims, and can be used to advance political or personal
+        agendas, damage reputations, or simply to generate attention. Fabrication
+        can take many forms, including inventing events, quotes, statistics, or entire identities.
+      </div>
+    </div>
+  </div>
+  <!--  popup welcome window  -->
+  <div id="welcome-stage-container" class="sliding-effect">
+    <div id="stage-title">
+      Welcome to Stage 3
+    </div>
+    <div id="welcome-stage-main-context">
+      Are you still keeping your notes? You should! It will prevent you from being the victim.
+    </div>
+    <div id="close-button-welcome-container">
+      <button id="close-button-container">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

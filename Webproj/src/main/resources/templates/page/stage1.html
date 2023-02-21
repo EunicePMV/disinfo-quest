@@ -13,6 +13,7 @@
     <link th:href="@{/stagesDesign/stageLayout.css}" rel="stylesheet" />
     <script th:src="@{/stage/stage1.js}"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Lato:wght@300&family=Roboto:wght@500&family=PT+Mono&family=Outfit:wght@300;400;500;700&family=Kodchasan:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>First Stage</title>
 </head>
 <body>
@@ -23,44 +24,44 @@
             <div id="user-container">
                 <div id="user-internal-container">
                     <div id="user-profile-container">
-                        <div id="username-initial-main-content">
-                            U
+                        <div id="username-initial-main-content" th:text="${userChar}">
                         </div>
                     </div>
-                    <div id="username-container">
-                        username
+                    <div id="username-container" th:text="${username}">
                     </div>
                 </div>
             </div>
             <div id="collage-news-container">
                 <div class="news-container">
                     <div class="news-title">
-                        News 1
+                        World’s eyes on PH as ‘ground zero’ for disinformation—Robredo
                     </div>
                     <div class="news-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium dicta esse impedit ipsum libero optio perferendis
-                        soluta ut? Culpa, ullam.
+                        Leni Robredo, a former vice president, urged civic society groups, international
+                        foundations, and local governments on Tuesday, Nov. 29, to work together to combat
+                        disinformation in the Philippines, which she described to as a "ground zero" for
+                        disinformation and influence operations.
                     </div>
                 </div>
                 <div class="news-container">
                     <div class="news-title">
-                        News 2
+                        Senators alarmed over recent survey results on fake news
                     </div>
                     <div class="news-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium dicta esse impedit ipsum libero optio perferendis
-                        soluta ut? Culpa, ullam.
+                        MANILA - Senators Nancy Binay and Jinggoy Estrada emphasized the importance of
+                        strengthening the fight against the spreading of false information on Wednesday.
                     </div>
                 </div>
                 <div class="news-container">
                     <div class="news-title">
-                        News 3
+                        Fighting disinformation requires individual and industry effort, DFNN says
                     </div>
                     <div class="news-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium dicta esse impedit ipsum libero optio perferendis
-                        soluta ut? Culpa, ullam.
+                        Technology has led to many advancements, but it has also created many traps,
+                        such false information and disinformation. According to a recent survey, a
+                        staggering 90% of the adult population of the nation has come into contact
+                        with fake news in some way, whether it be via the internet, television, or even
+                        their own friends and family.
                     </div>
                 </div>
                 <div id="fake-news-bar-container">
@@ -80,9 +81,9 @@
             </div>
             <div id="vertical-bar-divider"></div>
             <div id="post-button-container">
-                <button id="post-main-button">
+                <div id="post-main-button">
                     <span id="share-post-context">SHARE POST</span>
-                </button>
+                </div>
             </div>
         </div>
         <!-- Edit here to insert new stage       -->
@@ -134,7 +135,7 @@
                     <!-- if "Yeah!", post this -->
                     <div class="post-container hide">
                         <div class="post-content">
-                            That's great, then let's do it!
+                            Our start is great, let's do this!
                         </div>
                         <div class="option-container">
                             <span class="continue-container-proceed">
@@ -313,18 +314,21 @@
             </div>
         </div>
         <!--  popup instruction      -->
-        <div id="instruction-container">
+        <div id="instruction-container" class="sliding-effect">
             <div class="instruction-internal-container">
                 <div class="instruction-title-container">
                     How the technology was use to be a weapon in a form of Disinformation
                 </div>
                 <div class="instruction-descp-container">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Aperiam ex in nobis, non quas ratione tempora! At magni quo
-                    vel? Architecto doloribus eaque eligendi fuga mollitia!
-                    Blanditiis cum dolorem dolores explicabo fuga illum laudantium
-                    modi nemo, numquam perferendis possimus quibusdam recusandae
-                    repudiandae sed ut velit voluptatum? Harum libero officiis vel.
+                    Disinformation, also known as "fake news," is a growing problem in today's society.
+                    It refers to the deliberate spread of false or misleading information with the
+                    intention of manipulating public opinion and causing confusion. The rise of the
+                    internet and social media has made it easier than ever for disinformation to spread
+                    quickly and reach a large audience. Disinformation can take many forms, from fabricated
+                    news stories and conspiracy theories to manipulated images and videos. It can be spread
+                    through various mediums such as social media, traditional news outlets, and even through
+                    word of mouth. The consequences of disinformation can be severe, from undermining trust
+                    in democratic institutions to inciting violence and spreading hate.
                 </div>
             </div>
             <div class="instruction-internal-container">
@@ -332,12 +336,19 @@
                     The architecture of Disinformation
                 </div>
                 <div class="instruction-descp-container">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Aperiam ex in nobis, non quas ratione tempora! At magni quo
-                    vel? Architecto doloribus eaque eligendi fuga mollitia!
-                    Blanditiis cum dolorem dolores explicabo fuga illum laudantium
-                    modi nemo, numquam perferendis possimus quibusdam recusandae
-                    repudiandae sed ut velit voluptatum? Harum libero officiis vel.
+                    Chief Architects of Networked Disinformation. Elite advertising and PR strategists: They communicate with political clients and establish campaign goals.
+                    <br />
+                    <br />
+                    Digital Influencers. Anonymous Influencers: Unidentified administrators of social media sites with amusing, inspirational, or popular culture material turn marketing messaging into posts that become viral.
+                    <br />
+                    <br />
+                    Key Opinion Leaders: Celebrities and commentators who have large online communities of fans and followers they spread key campaign messages.
+                    <br />
+                    <br />
+                    Community-Level Fake Account Operators. Unstable middle-class workers employed by chiefs of staff of politicians or subcontracted by advertising and public relations strategists: they increase reach and produce "illusions of engagement"
+                    <br />
+                    <br />
+                    Grassroots Intermediaries. Volunteer political organizers, unpaid opinion leaders, and moderators of politician's fan
                 </div>
             </div>
             <div class="instruction-internal-container">
@@ -345,12 +356,10 @@
                     The role of the user
                 </div>
                 <div class="instruction-descp-container">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Aperiam ex in nobis, non quas ratione tempora! At magni quo
-                    vel? Architecto doloribus eaque eligendi fuga mollitia!
-                    Blanditiis cum dolorem dolores explicabo fuga illum laudantium
-                    modi nemo, numquam perferendis possimus quibusdam recusandae
-                    repudiandae sed ut velit voluptatum? Harum libero officiis vel.
+                    The web application is a “choose your own adventure” type of game where
+                    the choice of the user will determine the next path that the user will
+                    take in. A person to identify false information, one should be able to know
+                    how it was created. Reason why the user will be the one who will create it.
                 </div>
             </div>
             <button id="back-button-instruct-container">
@@ -360,6 +369,3 @@
     </div>
 </body>
 </html>
-
-<!-- if else condition if other option is click -->
-<!-- when last reply is displayed, display the nxt stage button -->

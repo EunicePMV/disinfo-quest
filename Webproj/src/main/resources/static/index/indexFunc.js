@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
+
     const startButton = document.querySelector('#start-button');
     startButton.addEventListener('click', function() {
         // display the popup form for the name
@@ -13,16 +14,38 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#username-container').style.display = 'none';
     });
 
-    const userNameDoneButton = document.querySelector('#form-done-button');
-    userNameDoneButton.addEventListener('click', function(e) {
-        e.preventDefault();
+//    const userNameDoneButton = document.querySelector('#form-done-button');
+//    userNameDoneButton.addEventListener('click', function(e) {
+//        e.preventDefault();
+//
+//        // get the user name value
+//        // pass the value
+//        const userName = document.querySelector('#username-input').value;
+//
+//        window.location.replace(`/stage1`);
+//
+//    });
 
-        // get the user name value
-        const userName = document.querySelector('#username-input').value;
+    // when project is click, display the project container
+    const project = document.querySelector('#project-text');
+    project.addEventListener('click', function(e) {
+        document.querySelector('#project-page-container').style.display = 'block';
+    });
 
-        // redirect to the intro page for PR Manager and pass in the name of the user
-//        window.location.replace(`/stage1/${userName}`);
-        window.location.replace(`/stage1`);
+    // when about is click, display the about container
+    const about = document.querySelector('#about-text');
+    about.addEventListener('click', function(e) {
+        document.querySelector('#about-page-container').style.display = 'block';
+    });
 
+    // if back button is click, close the container of this open text
+    const backButton = document.querySelectorAll('.back-index-main-button');
+    backButton.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const containerToClose = button.parentNode.parentNode;
+            containerToClose.style.display = 'none';
+        });
     });
 });
+
+//name="${_csrf.parameterName}" value="${_csrf.token}"
